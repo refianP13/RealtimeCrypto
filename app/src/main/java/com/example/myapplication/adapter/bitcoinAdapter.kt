@@ -23,16 +23,12 @@ class bitcoinAdapter (private val list: ArrayList<srcGambarItem>, private val ti
         var text: TextView = itemView.findViewById(R.id.atas)
         var bawah: TextView = itemView.findViewById(R.id.bawah)
         var k = 0
-
-
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.template_rv, parent, false)
         return ListViewHolder(view)
     }
-
     override fun onBindViewHolder(holder: bitcoinAdapter.ListViewHolder, position: Int) {
         val listkan = list[position]
         val tikkan = tik[position]

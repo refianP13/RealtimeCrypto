@@ -13,18 +13,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/cek"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginEnd="16dp"
-            tools:src="@tools:sample/avatars"
-            tools:ignore="MissingClass" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ex"
-            android:text="awal"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="4dp">
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Search"/>
+            </LinearLayout>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvCrypto"
             android:layout_width="match_parent"

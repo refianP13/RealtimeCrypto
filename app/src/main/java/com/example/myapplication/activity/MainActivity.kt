@@ -47,17 +47,12 @@ class MainActivity : AppCompatActivity() {
         rvCrypto.setHasFixedSize(true)
         rvCrypto.layoutManager = LinearLayoutManager(this)
         showContent()
-        val gambar = findViewById<ImageView>(R.id.cek)
-        Picasso.get()
-            .load("https://indodax.com/v2/logo/png/color/btc.png")
-            .into(gambar);
 
     }
 
 
 
     fun showContent() {
-        var ex = findViewById<TextView>(R.id.ex)
         var k = ""
 
         //kalau array pakai ini
@@ -70,7 +65,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<ArrayList<srcGambarItem>>, t: Throwable) {
-                ex.text = "hahahah"
+
             }
 
 
@@ -288,14 +283,14 @@ class MainActivity : AppCompatActivity() {
                 }
 
 
-                ex.text = k
+
                 val adapter2 = bitcoinAdapter(list2,list)
                 rvCrypto.adapter = adapter2
 
             }
 
             override fun onFailure(call: Call<aaData>, t: Throwable) {
-                ex.text = "error nih boss senggol dong"
+
             }
 
         })

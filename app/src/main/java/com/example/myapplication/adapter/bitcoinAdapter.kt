@@ -22,6 +22,8 @@ class bitcoinAdapter (private val list: ArrayList<srcGambarItem>, private val ti
         var pict: ImageView = itemView.findViewById(R.id.img_item_photo)
         var text: TextView = itemView.findViewById(R.id.atas)
         var bawah: TextView = itemView.findViewById(R.id.bawah)
+        var buy: TextView = itemView.findViewById(R.id.buy)
+        var sell: TextView = itemView.findViewById(R.id.sell)
         var k = 0
     }
 
@@ -37,6 +39,8 @@ class bitcoinAdapter (private val list: ArrayList<srcGambarItem>, private val ti
             .into(holder.pict);
         holder.text.text = listkan.description
         holder.bawah.text = tikkan.harga
+        holder.buy.text = "Rp. ${tikkan.harga}"
+        holder.sell.text = "Rp. ${(tikkan.harga.toInt()*0.995).toInt()}"
 
     }
 

@@ -5,5 +5,6 @@ data class srcGambarItem(
     var url_logo_png: String,
     var description: String,
     var hapus: String,
-    var ticker_id : String
+    var ticker_id : String,
+    var trade_min_traded_currency : String
 )

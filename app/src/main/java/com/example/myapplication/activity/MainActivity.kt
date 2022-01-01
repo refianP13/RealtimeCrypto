@@ -3,6 +3,7 @@ package com.example.myapplication.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -47,6 +48,10 @@ class MainActivity : AppCompatActivity() {
         rvCrypto.setHasFixedSize(true)
         rvCrypto.layoutManager = LinearLayoutManager(this)
         showContent()
+        var refresh = findViewById<Button>(R.id.refresh)
+        refresh.setOnClickListener(){
+            showContent()
+        }
 
     }
 
@@ -54,7 +59,7 @@ class MainActivity : AppCompatActivity() {
 
     fun showContent() {
         var k = ""
-
+        var ex = findViewById<TextView>(R.id.ex)
         //kalau array pakai ini
         RetrofitClient.instance.getDatag().enqueue(object : Callback<ArrayList<srcGambarItem>>{
             override fun onResponse(call: Call<ArrayList<srcGambarItem>>, response: Response<ArrayList<srcGambarItem>>) {
@@ -281,8 +286,6 @@ class MainActivity : AppCompatActivity() {
                     passing.harga = num[position]
                     list.add(passing)
                 }
-
-
 
                 val adapter2 = bitcoinAdapter(list2,list)
                 rvCrypto.adapter = adapter2

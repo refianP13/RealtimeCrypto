@@ -38,9 +38,12 @@ class bitcoinAdapter (private val list: ArrayList<srcGambarItem>, private val ti
             .load(listkan.url_logo_png)
             .into(holder.pict);
         holder.text.text = listkan.description
-        holder.bawah.text = tikkan.harga
+        holder.bawah.text = listkan.trade_min_traded_currency
         holder.buy.text = "Rp. ${tikkan.harga}"
-        holder.sell.text = "Rp. ${(tikkan.harga.toInt()*0.995).toInt()}"
+        if(position>181)
+            holder.sell.text = "Rp. ${tikkan.harga}"
+        else
+            holder.sell.text = "Rp. ${(tikkan.harga.toInt()*0.995).toInt()}"
 
     }
 

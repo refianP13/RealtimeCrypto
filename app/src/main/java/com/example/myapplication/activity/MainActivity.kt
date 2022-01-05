@@ -1,17 +1,19 @@
 package com.example.myapplication.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 import com.example.myapplication.R
 import com.example.myapplication.adapter.bitcoinAdapter
-import com.example.myapplication.adapter.realAdapter
+
 import com.example.myapplication.api.RetrofitClient
 import com.example.myapplication.modelData.crypto.AaveIdr
 import com.example.myapplication.modelData.crypto.Tickers
@@ -39,6 +41,7 @@ class MainActivity : AppCompatActivity() {
     //buat recyler view nih ingat woy
     lateinit var rvCrypto: RecyclerView
     var list2 = ArrayList<srcGambarItem>()
+    val emptylist = arrayListOf<passingBuy>()
     lateinit var list4 : aaData
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,42 +50,30 @@ class MainActivity : AppCompatActivity() {
         rvCrypto = findViewById(R.id.rvCrypto)
         rvCrypto.setHasFixedSize(true)
         rvCrypto.layoutManager = LinearLayoutManager(this)
-        showContent()
         var refresh = findViewById<Button>(R.id.refresh)
+        takeData()
         refresh.setOnClickListener(){
-            showContent()
+            takeData()
         }
-
     }
 
-
-
-    fun showContent() {
+    fun takeData() {
         var k = ""
         var ex = findViewById<TextView>(R.id.ex)
+        var list = arrayListOf<passingBuy>()
         //kalau array pakai ini
         RetrofitClient.instance.getDatag().enqueue(object : Callback<ArrayList<srcGambarItem>>{
             override fun onResponse(call: Call<ArrayList<srcGambarItem>>, response: Response<ArrayList<srcGambarItem>>) {
                 val listkan = response?.body()
                 list2 = listkan!!
-
-
             }
-
             override fun onFailure(call: Call<ArrayList<srcGambarItem>>, t: Throwable) {
-
             }
-
-
-
         })
         RetrofitClient.instance.getDatah().enqueue(object : Callback<aaData>{
             override fun onResponse(call: Call<aaData>, response: Response<aaData>) {
                 val listyuk = response?.body()
                 list4 = listyuk!!
-//                for(data in Tickers::class.memberProperties)
-//                    k += data
-
                 var num = Array(200){""}
                 num[0] = list4.tickers.btc_idr.buy
                 num[1] = list4.tickers.ten_idr.buy
@@ -279,23 +270,23 @@ class MainActivity : AppCompatActivity() {
                 num[192] = list4.tickers.ssp_usdt.buy
                 num[193] = list4.tickers.xec_usdt.buy
 
-                val sayang = passingBuy()
-                val list = arrayListOf<passingBuy>()
                 for(position in num.indices) {
                     val passing = passingBuy()
                     passing.harga = num[position]
                     list.add(passing)
                 }
-
                 val adapter2 = bitcoinAdapter(list2,list)
                 rvCrypto.adapter = adapter2
-
+                adapter2.setOnclickListener(object : bitcoinAdapter.onItemClickListener{
+                    override fun onItemclick(position: Int) {
+                        val intent = Intent(this@MainActivity,DetailCrypto::class.java)
+                        intent.putExtra("koin",position.toString())
+                        startActivity(intent)
+                    }
+                })
             }
-
             override fun onFailure(call: Call<aaData>, t: Throwable) {
-
             }
-
         })
     }
 

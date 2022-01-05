@@ -38,6 +38,7 @@
                     android:layout_height="40dp"
                     android:text="R"
                     android:background="@drawable/refresh_v"/>
+
             </LinearLayout>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvCrypto"

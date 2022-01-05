@@ -3,6 +3,7 @@ package com.example.myapplication.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -15,21 +16,34 @@ import com.example.myapplication.modelData.gambar.srcGambarItem
 import com.squareup.picasso.Picasso
 
 
-class bitcoinAdapter (private val list: ArrayList<srcGambarItem>, private val tik: ArrayList<passingBuy>) : RecyclerView.Adapter<bitcoinAdapter.ListViewHolder>() {
+class bitcoinAdapter (  private val list: ArrayList<srcGambarItem>,
+                        private val tik: ArrayList<passingBuy>,
+                        ) : RecyclerView.Adapter<bitcoinAdapter.ListViewHolder>() {
 
-
-    inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    interface onItemClickListener{
+        fun  onItemclick(position: Int)
+    }
+    private lateinit var mlistener : onItemClickListener
+    fun setOnclickListener(listener: onItemClickListener){
+        mlistener = listener
+    }
+    inner class ListViewHolder(itemView: View, listener: onItemClickListener) : RecyclerView.ViewHolder(itemView) {
         var pict: ImageView = itemView.findViewById(R.id.img_item_photo)
         var text: TextView = itemView.findViewById(R.id.atas)
         var bawah: TextView = itemView.findViewById(R.id.bawah)
         var buy: TextView = itemView.findViewById(R.id.buy)
         var sell: TextView = itemView.findViewById(R.id.sell)
         var k = 0
+        init {
+            itemView.setOnClickListener{
+                listener.onItemclick(adapterPosition)
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.template_rv, parent, false)
-        return ListViewHolder(view)
+        return ListViewHolder(view,mlistener)
     }
     override fun onBindViewHolder(holder: bitcoinAdapter.ListViewHolder, position: Int) {
         val listkan = list[position]

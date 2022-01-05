@@ -1,9 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.DetailCrypto">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/kode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="uhtycghvghvjgvhv" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/detailGambar"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_below="@+id/kode"
+                android:layout_marginTop="13dp"
+                tools:src="@drawable/refresh_v" />
+
+            <TextView
+                android:id="@+id/nama"
+                android:layout_width="265dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/kode"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="16dp"
+                android:layout_toEndOf="@+id/detailGambar"
+                android:text="Nama Crypto" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="265dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nama"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="16dp"
+                android:layout_toEndOf="@+id/detailGambar"
+                android:text="Data Volume, DLL" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/divider3"
+                android:layout_marginTop="15dp"
+                android:text="{Coin} adalah luar biasa banget sampai sampai gua gak tahu lagi mau ngomong apa keren banget dah nih koin beli cepat beli biar makain makain dah lu" />
+
+            <Button
+                android:id="@+id/beliDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2"
+                android:layout_marginTop="34dp"
+                android:layout_marginEnd="33dp"
+                android:layout_toStartOf="@+id/button2"
+                android:text="Beli" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="34dp"
+                android:layout_marginEnd="24dp"
+                android:text="Jual" />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignBottom="@+id/detailGambar"
+                android:layout_marginBottom="-21dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="19dp"
+                android:layout_toEndOf="@+id/detailGambar"
+                android:background="#4CAF50"
+                android:padding="5dp"
+                android:text="680000000" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView"
+                android:layout_marginStart="121dp"
+                android:layout_marginTop="19dp"
+                android:layout_toEndOf="@+id/detailGambar"
+                android:background="#F44336"
+                android:padding="5dp"
+                android:text="670000000" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2"
+                android:layout_marginTop="600dp"
+                android:text="Bisa Discroll Kan Bisa kan" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

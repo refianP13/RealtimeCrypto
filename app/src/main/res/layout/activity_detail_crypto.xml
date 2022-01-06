@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="8dp"
     tools:context=".activity.DetailCrypto">
 
     <ScrollView
@@ -16,17 +17,10 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/kode"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="uhtycghvghvjgvhv" />
-
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/detailGambar"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
-                android:layout_below="@+id/kode"
                 android:layout_marginTop="13dp"
                 tools:src="@drawable/refresh_v" />
 
@@ -34,14 +28,13 @@
                 android:id="@+id/nama"
                 android:layout_width="265dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/kode"
                 android:layout_marginStart="18dp"
                 android:layout_marginTop="16dp"
                 android:layout_toEndOf="@+id/detailGambar"
                 android:text="Nama Crypto" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/data"
                 android:layout_width="265dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/nama"
@@ -63,20 +56,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView2"
-                android:layout_marginTop="34dp"
-                android:layout_marginEnd="33dp"
-                android:layout_toStartOf="@+id/button2"
-                android:text="Beli" />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView2"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="34dp"
-                android:layout_marginEnd="24dp"
-                android:text="Jual" />
+                android:layout_marginTop="31dp"
+                android:layout_marginEnd="15dp"
+                android:text="Add To Favorit" />
 
             <View
                 android:id="@+id/divider3"
@@ -87,28 +70,32 @@
                 android:background="?android:attr/listDivider" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/beli"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView"
+                android:layout_below="@+id/data"
                 android:layout_marginStart="18dp"
                 android:layout_marginTop="19dp"
                 android:layout_toEndOf="@+id/detailGambar"
-                android:background="#4CAF50"
+                android:background="@drawable/shadow"
+                android:elevation="10dp"
                 android:padding="5dp"
-                android:text="680000000" />
+                android:text="680000000"
+                android:textColor="#4CAF50" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/jual"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView"
-                android:layout_marginStart="121dp"
+                android:layout_below="@+id/data"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="19dp"
-                android:layout_toEndOf="@+id/detailGambar"
-                android:background="#F44336"
+                android:layout_toEndOf="@+id/beli"
+                android:background="@drawable/shadow"
+                android:elevation="10dp"
                 android:padding="5dp"
-                android:text="670000000" />
+                android:text="670000000"
+                android:textColor="#F44336" />
 
             <Button
                 android:id="@+id/button6"

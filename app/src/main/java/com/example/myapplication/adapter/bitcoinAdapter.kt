@@ -54,10 +54,7 @@ class bitcoinAdapter (  private val list: ArrayList<srcGambarItem>,
         holder.text.text = listkan.description
         holder.bawah.text = listkan.trade_min_traded_currency
         holder.buy.text = "Rp. ${tikkan.harga}"
-        if(position>181)
-            holder.sell.text = "Rp. ${tikkan.harga}"
-        else
-            holder.sell.text = "Rp. ${(tikkan.harga.toInt()*0.995).toInt()}"
+        holder.sell.text = "Rp. ${tikkan.jual}"
 
     }
 

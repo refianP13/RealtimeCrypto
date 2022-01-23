@@ -5,12 +5,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="8dp"
     tools:context=".activity.DetailCrypto">
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar"
+        />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/footer"
+        android:padding="8dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -21,7 +27,8 @@
                 android:id="@+id/detailGambar"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
-                android:layout_marginTop="13dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="1dp"
                 tools:src="@drawable/refresh_v" />
 
             <TextView
@@ -29,7 +36,7 @@
                 android:layout_width="265dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="18dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="1dp"
                 android:layout_toEndOf="@+id/detailGambar"
                 android:text="Nama Crypto" />
 
@@ -108,5 +115,21 @@
         </RelativeLayout>
     </ScrollView>
 
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shadow"
+        android:elevation="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/home"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_home" />
+    </LinearLayout>
 
 </RelativeLayout>

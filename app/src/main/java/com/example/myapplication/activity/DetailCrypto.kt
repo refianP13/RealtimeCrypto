@@ -13,12 +13,16 @@ class DetailCrypto : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_crypto)
-
+        val kembali = findViewById<ImageView>(R.id.left_icon)
+        kembali.setOnClickListener(){
+            startActivity(Intent(this,Tabel::class.java))
+        }
         var inNama = intent.getStringExtra("nama")
         var inData = intent.getStringExtra("data")
         var inBeli = intent.getStringExtra("beli")
         var inPict = intent.getStringExtra("pict")
         var inSell = intent.getStringExtra("jual")
+        var volume = intent.getStringExtra("vol")
         var nama = findViewById<TextView>(R.id.nama)
         var data = findViewById<TextView>(R.id.data)
         var beliHarga = findViewById<TextView>(R.id.beli)
@@ -35,6 +39,10 @@ class DetailCrypto : AppCompatActivity() {
         var beli = findViewById<Button>(R.id.beliDetail)
         beli.setOnClickListener(){
             startActivity(Intent(this,MainActivity::class.java))
+        }
+        val home = findViewById<Button>(R.id.home)
+        home.setOnClickListener(){
+            startActivity(Intent(this, Menu::class.java))
         }
     }
 }

@@ -5,69 +5,78 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.Login">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="101dp"
+            android:layout_height="75dp"
+            android:src="@drawable/ic_baseline_login_24" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="236dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:background="@drawable/shadow"
+            android:elevation="10dp"
+            android:hint="E-Mail"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="7dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="236dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:background="@drawable/shadow"
+            android:elevation="10dp"
+            android:hint="Password"
+
+            android:inputType="textPassword"
+            android:paddingLeft="7dp" />
+
         <LinearLayout
-            android:layout_centerInParent="true"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="67dp"
             android:layout_gravity="center"
             android:gravity="center"
-            android:orientation="vertical">
-            <ImageView
-                android:layout_width="101dp"
-                android:layout_height="75dp"
-                android:src="@drawable/ic_baseline_login_24" />
-            <EditText
-                android:id="@+id/email"
-                android:layout_width="236dp"
-                android:layout_height="34dp"
-                android:layout_gravity="center"
-                android:background="@drawable/shadow"
-                android:elevation="10dp"
-                android:hint="E-Mail"
+            android:orientation="horizontal">
 
-                android:inputType="textEmailAddress"
-                android:paddingLeft="7dp" />
+            <Button
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="LOGIN" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                />
+                android:text="     " />
 
-            <EditText
-                android:id="@+id/password"
-                android:layout_width="236dp"
-                android:layout_height="34dp"
+            <Button
+                android:id="@+id/guest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@drawable/shadow"
-                android:elevation="10dp"
-                android:hint="Password"
-
-                android:inputType="textPassword"
-                android:paddingLeft="7dp" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="67dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/login"
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="LOGIN" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="     " />
-
-                <Button
-                    android:id="@+id/guest"
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Guest" />
-            </LinearLayout>
+                android:text="Guest" />
         </LinearLayout>
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REGISTER" />
+    </LinearLayout>
 </RelativeLayout>

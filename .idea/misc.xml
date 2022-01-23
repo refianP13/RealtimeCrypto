@@ -5,10 +5,18 @@
       <map>
         <entry key="..\:/Users/10/AndroidStudioProjects/MyApplication/app/src/main/res/drawable-v24/ic_baseline_login_24.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/10/AndroidStudioProjects/MyApplication/app/src/main/res/drawable-v24/shadow.xml" value="0.22552083333333334" />
-        <entry key="..\:/Users/10/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_detail_crypto.xml" value="0.3817663817663818" />
-        <entry key="..\:/Users/10/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_login.xml" value="0.19882246376811594" />
+        <entry key="..\:/Users/10/AndroidStudioProjects/MyApplication/app/src/main/res/drawable-v24/shadowtoolbar.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/10/AndroidStudioProjects/MyApplication/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/10/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_detail_crypto.xml" value="0.25" />
+        <entry key="..\:/Users/10/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_get_started.xml" value="0.25" />
+        <entry key="..\:/Users/10/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_login.xml" value="0.10182370820668693" />
         <entry key="..\:/Users/10/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Users/10/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_menu.xml" value="0.33" />
+        <entry key="..\:/Users/10/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_menu.xml" value="0.25" />
+        <entry key="..\:/Users/10/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_pengaturan.xml" value="0.21" />
+        <entry key="..\:/Users/10/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_profil.xml" value="0.33" />
+        <entry key="..\:/Users/10/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_profil_page.xml" value="0.20697463768115942" />
+        <entry key="..\:/Users/10/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_register.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/10/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_registrasi.xml" value="0.13072916666666667" />
         <entry key="..\:/Users/10/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_tabel.xml" value="0.19882246376811594" />
         <entry key="..\:/Users/10/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_tes_tes_aja.xml" value="0.209375" />
         <entry key="..\:/Users/10/AndroidStudioProjects/MyApplication/app/src/main/res/layout/app_bar_tes_tes_aja.xml" value="0.209375" />
@@ -19,7 +27,9 @@
         <entry key="..\:/Users/10/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragment_slideshow.xml" value="0.209375" />
         <entry key="..\:/Users/10/AndroidStudioProjects/MyApplication/app/src/main/res/layout/nav_header_tes_tes_aja.xml" value="0.209375" />
         <entry key="..\:/Users/10/AndroidStudioProjects/MyApplication/app/src/main/res/layout/template_rv.xml" value="0.33" />
+        <entry key="..\:/Users/10/AndroidStudioProjects/MyApplication/app/src/main/res/layout/toolbar.xml" value="0.20923913043478262" />
         <entry key="..\:/Users/10/AndroidStudioProjects/MyApplication/app/src/main/res/menu/activity_main_drawer.xml" value="0.5" />
+        <entry key="..\:/Users/10/AndroidStudioProjects/MyApplication/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.22552083333333334" />
       </map>
     </option>
   </component>

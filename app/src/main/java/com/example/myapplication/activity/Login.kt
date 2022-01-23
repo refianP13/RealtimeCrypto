@@ -13,10 +13,14 @@ class Login : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         val login = findViewById<Button>(R.id.login)
         val guest = findViewById<Button>(R.id.guest)
+        val register = findViewById<Button>(R.id.register)
         login.setOnClickListener(){
             startActivity(Intent(this@Login,Menu::class.java))
         }
         guest.setOnClickListener(){
+            startActivity(Intent(this@Login,Menu::class.java))
+        }
+        register.setOnClickListener(){
             startActivity(Intent(this@Login,Menu::class.java))
         }
     }

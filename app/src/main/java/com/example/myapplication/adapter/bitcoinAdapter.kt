@@ -27,13 +27,13 @@ class bitcoinAdapter (  private val list: ArrayList<srcGambarItem>,
     fun setOnclickListener(listener: onItemClickListener){
         mlistener = listener
     }
+
     inner class ListViewHolder(itemView: View, listener: onItemClickListener) : RecyclerView.ViewHolder(itemView) {
         var pict: ImageView = itemView.findViewById(R.id.img_item_photo)
         var text: TextView = itemView.findViewById(R.id.atas)
         var bawah: TextView = itemView.findViewById(R.id.bawah)
         var buy: TextView = itemView.findViewById(R.id.buy)
         var sell: TextView = itemView.findViewById(R.id.sell)
-        var k = 0
         init {
             itemView.setOnClickListener{
                 listener.onItemclick(adapterPosition)
@@ -52,7 +52,7 @@ class bitcoinAdapter (  private val list: ArrayList<srcGambarItem>,
             .load(listkan.url_logo_png)
             .into(holder.pict);
         holder.text.text = listkan.description
-        holder.bawah.text = listkan.trade_min_traded_currency
+        holder.bawah.text = tikkan.volume
         holder.buy.text = "Rp. ${tikkan.harga}"
         holder.sell.text = "Rp. ${tikkan.jual}"
 

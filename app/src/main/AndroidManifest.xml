@@ -12,6 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".activity.Registrasi"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ProfilPage"
+            android:exported="false" />
+        <activity
+            android:name=".activity.GetStarted"
+            android:exported="false" />
+        <activity
+            android:name=".activity.Pengaturan"
+            android:exported="false" />
+        <activity
             android:name=".activity.Tabel"
             android:exported="false" />
         <activity
@@ -20,11 +32,6 @@
         <activity
             android:name=".activity.Menu"
             android:exported="false" />
-        <activity
-            android:name=".activity.TesTesAja"
-            android:exported="false"
-            android:label="@string/title_activity_tes_tes_aja"
-            android:theme="@style/Theme.MyApplication.NoActionBar" />
         <activity
             android:name=".activity.DetailCrypto"
             android:exported="false" />

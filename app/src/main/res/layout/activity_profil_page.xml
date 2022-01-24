@@ -20,7 +20,7 @@
         app:srcCompat="@drawable/refresh_v" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/nama"
         android:layout_width="194dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/toolbar"
@@ -30,20 +30,20 @@
         android:text="Nama" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/email"
         android:layout_width="194dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/nama"
         android:layout_marginStart="30dp"
         android:layout_marginTop="17dp"
         android:layout_toEndOf="@+id/imageView2"
         android:text="E-Mail" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/notel"
         android:layout_width="194dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView3"
+        android:layout_below="@+id/email"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
         android:layout_toEndOf="@+id/imageView2"

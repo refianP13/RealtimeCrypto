@@ -17,7 +17,7 @@ class Pengaturan : AppCompatActivity() {
         }
         val home = findViewById<Button>(R.id.home)
         home.setOnClickListener(){
-            startActivity(Intent(this, Menu::class.java))
+            startActivity(Intent(this@Pengaturan, Menu::class.java))
         }
     }
 }

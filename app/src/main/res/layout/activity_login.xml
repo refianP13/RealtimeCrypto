@@ -27,7 +27,7 @@
             android:background="@drawable/shadow"
             android:elevation="10dp"
             android:hint="E-Mail"
-            android:inputType="textEmailAddress"
+            android:inputType="textAutoCorrect|text|textAutoComplete|textEmailAddress|textEmailSubject"
             android:paddingLeft="7dp" />
 
         <TextView

@@ -14,6 +14,7 @@ import com.example.myapplication.modelData.gambar.passingBuy
 
 import com.example.myapplication.modelData.gambar.srcGambarItem
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.template_rv.view.*
 
 
 class bitcoinAdapter (  private val list: ArrayList<srcGambarItem>,
@@ -33,7 +34,7 @@ class bitcoinAdapter (  private val list: ArrayList<srcGambarItem>,
         var text: TextView = itemView.findViewById(R.id.atas)
         var bawah: TextView = itemView.findViewById(R.id.bawah)
         var buy: TextView = itemView.findViewById(R.id.buy)
-        var sell: TextView = itemView.findViewById(R.id.sell)
+        //var sell: TextView = itemView.findViewById(R.id.sell)
         init {
             itemView.setOnClickListener{
                 listener.onItemclick(adapterPosition)
@@ -54,7 +55,7 @@ class bitcoinAdapter (  private val list: ArrayList<srcGambarItem>,
         holder.text.text = listkan.description
         holder.bawah.text = tikkan.volume
         holder.buy.text = "Rp. ${tikkan.harga}"
-        holder.sell.text = "Rp. ${tikkan.jual}"
+        holder.itemView.sell.text = "Rp. ${tikkan.jual}"
 
     }
 
